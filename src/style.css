@@ -12,4 +12,78 @@
 body {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
+  color: var(--veryDarkBlue);
+  background-color: var(--veryLightGray);
+}
+
+.wrapper {
+  margin-inline: 1.5rem;
+}
+
+.hero {
+  margin-block: 4rem;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 1.6rem;
+  font-weight: 200;
+  line-height: 2.2ch;
+}
+
+.hero__title__highlight {
+  display: block;
+  font-weight: 600;
+}
+
+.hero__description {
+  line-height: 2.35ch;
+  color: var(--grayishBlue);
+}
+
+.cards-grid {
+  margin-bottom: 4rem;
+
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cards-grid__card {
+  padding: 1.85rem;
+  border-radius: 0.5rem;
+
+  background-color: #fff;
+  box-shadow: 0px 4px 12px -6px var(--veryDarkBlue);
+}
+
+.cards-grid__card__title {
+  margin: 0;
+}
+
+.cards-grid__card__description {
+  margin-block: 0.5rem;
+  line-height: 2.5ch;
+  color: var(--grayishBlue);
+}
+
+.cards-grid__card__icon {
+  margin-top: 1.75rem;
+  display: block;
+  margin-left: auto;
+}
+
+.cards-grid__card--supervisor {
+  border-top: 4px solid var(--cyan);
+}
+
+.cards-grid__card--team-builder {
+  border-top: 4px solid var(--red);
+}
+
+.cards-grid__card--karma {
+  border-top: 4px solid var(--orange);
+}
+
+.cards-grid__card--calculator {
+  border-top: 4px solid var(--blue);
 }
