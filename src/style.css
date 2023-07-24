@@ -9,15 +9,20 @@
   --veryLightGray: hsl(0, 0%, 98%);
 }
 
+html {
+  font-size: 15px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
   color: var(--veryDarkBlue);
   background-color: var(--veryLightGray);
 }
 
 .wrapper {
-  margin-inline: 1.5rem;
+  padding-inline: 1.5rem;
+  margin-inline: auto;
+  max-width: 80em;
 }
 
 .hero {
@@ -27,6 +32,7 @@ body {
 
 .hero__title {
   font-size: 1.6rem;
+  font-size: clamp(1.6rem, 6vw, 2.5rem);
   font-weight: 200;
   line-height: 2.2ch;
 }
@@ -37,6 +43,10 @@ body {
 }
 
 .hero__description {
+  margin-inline: auto;
+  max-width: 55ch;
+
+  font-size: clamp(1rem, 3vw, 1.15rem);
   line-height: 2.35ch;
   color: var(--grayishBlue);
 }
@@ -86,4 +96,32 @@ body {
 
 .cards-grid__card--calculator {
   border-top: 4px solid var(--blue);
+}
+
+@media screen and (min-width: 40em) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 65em) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  .cards-grid__card--supervisor {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+
+  .cards-grid__card--team-builder,
+  .cards-grid__card--karma {
+    grid-column: 2 / 3;
+  }
+
+  .cards-grid__card--calculator {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
 }
